@@ -1,17 +1,22 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/analytics';
+import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBe23vGrWbbtK6cWQflEewoDvTBtKWQEBM",
-  authDomain: "test-project-116cf.firebaseapp.com",
-  databaseURL: "https://test-project-116cf.firebaseio.com",
-  projectId: "test-project-116cf",
-  storageBucket: "test-project-116cf.appspot.com",
-  messagingSenderId: "507446435196",
-  appId: "1:507446435196:web:ccd56d1abf6f31a8e058f9",
-  measurementId: "G-BVQFXBP732"
+  apiKey: "AIzaSyD2HmFHOY3iuC-w0Da9tWhF8XfcRPe15I0",
+  authDomain: "flashcardzz.firebaseapp.com",
+  databaseURL: "https://flashcardzz.firebaseio.com",
+  projectId: "flashcardzz",
+  storageBucket: "flashcardzz.appspot.com",
+  messagingSenderId: "178818432212",
+  appId: "1:178818432212:web:796649b1c9c4f21f0d8f41",
+  measurementId: "G-6GM9YGJ0XP",
 };
 
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
+export const db = firebase.firestore();
 export const auth = firebase.auth();
 export const googleProvider = new firebase.auth.GoogleAuthProvider();

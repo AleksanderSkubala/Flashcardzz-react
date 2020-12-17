@@ -2,9 +2,9 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 import { UserProvider } from '../../providers/UserProvider';
-import Protected from '../Protected/Protected';
-import Main from '../../views/Main/Main';
-import Login from '../../views/Login/Login';
+import Protected from '../Protected';
+import Main from '../../views/Main';
+import Login from '../../views/Login';
 
 function App() {
   return (

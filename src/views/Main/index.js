@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { UserContext } from '../../providers/UserProvider';
 import { auth } from '../../firebaseInit';
+import Form from '../../components/Form';
 
 const StyledWrapper = styled.div`
   text-align: center;
@@ -21,6 +22,8 @@ export default function Main() {
   return (
     <StyledWrapper>
       <h1>Hi {user.displayName}!</h1>
+      <p>Your user id is: {user.uid}</p>
+      <Form/>
       <StyledButton onClick={() => auth.signOut()}>Sign Out</StyledButton>
     </StyledWrapper>
   )
