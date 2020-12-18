@@ -1,30 +1,18 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import { UserContext } from '../../providers/UserProvider';
 import { auth } from '../../firebaseInit';
 import Form from '../../components/Form';
-
-const StyledWrapper = styled.div`
-  text-align: center;
-`;
-
-const StyledButton = styled.button`
-  border: none;
-  background: none;
-  font-size: 1.1em;
-  text-decoration: underline;
-  cursor: pointer;
-`;
+import Button from '../../components/Button';
 
 export default function Main() {
   const { user } = useContext(UserContext);
 
   return (
-    <StyledWrapper>
+    <div className="w-full min-h-full">
       <h1>Hi {user.displayName}!</h1>
-      <p>Your user id is: {user.uid}</p>
       <Form/>
-      <StyledButton onClick={() => auth.signOut()}>Sign Out</StyledButton>
-    </StyledWrapper>
+      <Button onClick={() => auth.signOut()}>Sign Out</Button>
+    </div>
+
   )
 };
