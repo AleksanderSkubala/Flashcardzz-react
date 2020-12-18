@@ -9,7 +9,7 @@ import Login from '../../views/Login';
 function App() {
   return (
     <UserProvider>
-      <Router>
+      <Router className="font-mono">
         <Protected path="/" view={<Main/>} />
         <Login path="/login"/>
       </Router>
